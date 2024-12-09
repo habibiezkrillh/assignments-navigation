@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/first_screen.dart';
 import 'screens/second_screen.dart';
 import 'screens/third_screen.dart';
+import 'screens/dynamic_route_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => FirstScreen(),
         '/second': (context) => SecondScreen(),
         '/third': (context) => ThirdScreen(),
+        '/dynamic': (context) => DynamicRouteScreen(),
       },
     );
   }

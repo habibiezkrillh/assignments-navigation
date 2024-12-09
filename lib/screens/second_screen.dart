@@ -4,34 +4,20 @@ import '../widgets/bottom_nav_bar.dart';
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final args =
-        ModalRoute.of(context)!.settings.arguments as Map<String, String>?;
-
     return Scaffold(
       appBar: AppBar(
-        title: Text('Projects'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        title: Text('Second Screen'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Projects List'),
-            Text('Navigated from: ${args?['from'] ?? 'Unknown'}'),
+            Text('Second Screen Content'),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(
-                  context,
-                  '/third',
-                  arguments: {'from': 'Second Screen'},
-                );
+                Navigator.pushNamed(context, '/dynamic');
               },
-              child: Text('Go to Contact Form'),
+              child: Text('Go to Dynamic Routes'),
             ),
           ],
         ),

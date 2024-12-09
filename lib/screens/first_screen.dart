@@ -33,6 +33,12 @@ class FirstScreen extends StatelessWidget {
               },
               child: Text('View My Projects'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/dynamic');
+              },
+              child: Text('Go to Dynamic Routes'),
+            ),
           ],
         ),
       ),
